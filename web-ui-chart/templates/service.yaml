@@ -8,8 +8,8 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: {{ .Values.image.port }}
       protocol: TCP
-      name: http
+      name: web-ui-port
   selector:
     {{- include "web-ui-chart.selectorLabels" . | nindent 4 }}

@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: exampple/web-ui
+  repository: example/web-ui
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -13,7 +13,7 @@ image:
 
 imagePullSecrets: []
 nameOverride: ""
-fullnameOverride: ""
+fullnameOverride: "web-ui"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -39,7 +39,7 @@ securityContext: {}
 
 service:
   type: LoadBalancer
-  port: 4200
+  port: 4201
 
 ingress:
   enabled: false

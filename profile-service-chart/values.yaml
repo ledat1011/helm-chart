@@ -85,6 +85,7 @@ affinity: {}
 environment:
   eureka:
     url: http://eureka-server:8761/eureka
+    hostname: abc
   datasource:
     host: mysql
     port: 3307
